@@ -38,8 +38,8 @@ app.get('/api/', (req, res) => res.send('this is api'))
 require('./app/routes/product.routes')(app);
 require('./app/routes/user.routes')(app);
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+app.listen(port, function(){
+    console.log("Express server listening on port "+ port);
   });
 
 
