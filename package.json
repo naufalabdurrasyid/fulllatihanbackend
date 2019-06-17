@@ -1,0 +1,21 @@
+{
+  "name": "latihan22mei",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.0",
+    "nodemon": "1.19.0",
+    "body-parser": "1.19.0",
+    "mongoose": "^5.5.10",
+    "bcrypt":"^3.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+
+}

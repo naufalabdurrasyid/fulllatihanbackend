@@ -1,0 +1,46 @@
+const express = require('express');
+const app = express();
+const port = 3000; 
+
+const mongoose = require('mongoose');
+
+const bodyParser = require('body-parser');
+
+const dbConfig = require('./config/dbServer');
+const bcrypt = require('bcryptjs');
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./config/swagger.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+//configure mongoose promise
+mongoose.Promise = global.Promise;
+
+mongoose.connect(dbConfig.mongoURL, {
+    useNewUrlParser: true
+}).then(() => {
+    console.log('yeah connect to database')
+}).catch(error => {
+    console.log('waduh couldnnt connect to database', error);
+    process.exit
+})
+
+// url encode of content type
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+
+app.get('/',(req,res) => res.send('welcome to express'))
+
+app.get('/api/', (req, res) => res.send('this is api'))
+
+// import router
+require('./app/routes/product.routes')(app);
+require('./app/routes/user.routes')(app);
+
+app.listen(port, () => {
+    console.log(`your server is live at  at http://localhost:${port}`)
+});
+
+
+module.exports = app;

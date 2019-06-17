@@ -1,0 +1,107 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "No description",
+    "version" : "1.0.0",
+    "title" : "tes1"
+  },
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/api/product" : {
+      "get" : {
+        "tags" : [ "Product" ],
+        "summary" : "get",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Product" ],
+        "summary" : "post",
+        "consumes" : [ ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/post"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/api/product/:id" : {
+      "put" : {
+        "tags" : [ "Product" ],
+        "summary" : "update",
+        "consumes" : [ ],
+        "parameters" : [ {
+          "name" : "tes2",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "body",
+          "in" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/update"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Product" ],
+        "summary" : "delete",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "update" : {
+      "type" : "object",
+      "properties" : {
+        "nama_produk" : {
+          "type" : "string"
+        },
+        "desk_produk" : {
+          "type" : "string"
+        }
+      }
+    },
+    "post" : {
+      "type" : "object",
+      "properties" : {
+        "nama_produk" : {
+          "type" : "string"
+        },
+        "harga_produk" : {
+          "type" : "number"
+        },
+        "desk_produk" : {
+          "type" : "string"
+        },
+        "availability" : {
+          "type" : "boolean"
+        }
+      }
+    }
+  }
+}
