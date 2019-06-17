@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000; 
+const port = process.env.PORT || 3000;  
 
 const mongoose = require('mongoose');
 
@@ -38,9 +38,9 @@ app.get('/api/', (req, res) => res.send('this is api'))
 require('./app/routes/product.routes')(app);
 require('./app/routes/user.routes')(app);
 
-app.listen(port, () => {
-    console.log(`your server is live at  at http://localhost:${port}`)
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 
 
 module.exports = app;
