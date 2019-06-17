@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const dbConfig = require('./config/dbServer');
-const bcrypt = require('bcrypt');
+//const bcrypt = require('bcrypt');
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./config/swagger.json');
