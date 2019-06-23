@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.0",
-    "nodemon": "1.19.0",
+    "bcrypt": "^3.0.6",
     "body-parser": "1.19.0",
+    "express": "^4.17.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.10",
-    "bcrypt":"^3.0.6",
-    "swagger":"0.7.5",
-    "swagger-ui-express":"4.0.6"
-
+    "nodemon": "1.19.0",
+    "swagger": "0.7.5",
+    "swagger-ui": "^3.22.3",
+    "swagger-ui-express": "4.0.6"
   },
   "devDependencies": {},
   "scripts": {
@@ -21,5 +22,4 @@
   "author": "",
   "license": "ISC",
   "description": ""
-
 }

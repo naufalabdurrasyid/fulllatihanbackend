@@ -1,0 +1,28 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/n/versions/node/10.16.0/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bcrypt' ]
+2 info using npm@3.5.2
+3 info using node@v10.16.0
+4 verbose stack Error: Cannot find module 'ansi'
+4 verbose stack     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+4 verbose stack     at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+4 verbose stack     at Module.require (internal/modules/cjs/loader.js:690:17)
+4 verbose stack     at require (internal/modules/cjs/helpers.js:25:18)
+4 verbose stack     at Object.<anonymous> (/usr/share/npm/lib/ls.js:15:13)
+4 verbose stack     at Module._compile (internal/modules/cjs/loader.js:776:30)
+4 verbose stack     at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+4 verbose stack     at Module.load (internal/modules/cjs/loader.js:653:32)
+4 verbose stack     at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+4 verbose stack     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+5 verbose cwd /home/muhammad/Documents/latihan22mei
+6 error Linux 4.18.0-20-generic
+7 error argv "/usr/local/n/versions/node/10.16.0/bin/node" "/usr/bin/npm" "install" "bcrypt"
+8 error node v10.16.0
+9 error npm  v3.5.2
+10 error code MODULE_NOT_FOUND
+11 error Cannot find module 'ansi'
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]

@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const dbConfig = require('./config/dbServer');
+
 //const bcrypt = require('bcrypt');
 
 const swaggerUi = require('swagger-ui-express');
@@ -24,6 +25,9 @@ mongoose.connect(dbConfig.mongoURL, {
     console.log('waduh couldnnt connect to database', error);
     process.exit
 })
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 // url encode of content type
 
